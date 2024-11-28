@@ -98,10 +98,14 @@ function blurImgEdges() {
     if (width / imgWidth > 1.01) {
         noStroke();
         fill(255, 255)
+
         let blurPx = imgWidth * 0.01
+        let blurMargin = 10
         drawingContext.filter = `blur(${blurPx}px)`;
-        rect(-10, -10, width / 2 - imgWidth / 2 + imgWidth * 0.02, height + 20)
-        rect(width - (width / 2 - imgWidth / 2) - imgWidth * 0.02, -10, width + 10, height + 20)
+
+
+        rect(-blurMargin, -blurMargin, (width - imgWidth) / 2 + blurMargin + imgWidth * 0.01, height + blurMargin * 2)
+        rect(width - (width - imgWidth) / 2 - imgWidth * 0.01, -blurMargin, width + blurMargin, height + blurMargin * 2)
         drawingContext.filter = "blur(0px)";
     }
 }
