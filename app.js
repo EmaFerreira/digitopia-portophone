@@ -104,8 +104,8 @@ function blurImgEdges() {
         drawingContext.filter = `blur(${blurPx}px)`;
 
 
-        rect(-blurMargin, -blurMargin, (width - imgWidth) / 2 + blurMargin + imgWidth * 0.01, height + blurMargin * 2)
-        rect(width - (width - imgWidth) / 2 - imgWidth * 0.01, -blurMargin, width + blurMargin, height + blurMargin * 2)
+        rect(-blurMargin, -blurMargin, (width - imgWidth) / 2 + blurMargin + imgWidth * 0.02, height + blurMargin * 2)
+        rect(width - (width - imgWidth) / 2 - imgWidth * 0.02, -blurMargin, width + blurMargin, height + blurMargin * 2)
         drawingContext.filter = "blur(0px)";
     }
 }

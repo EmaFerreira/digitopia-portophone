@@ -74,7 +74,7 @@ class Zona {
         if (this.growCircle > this.raio / 1.5 || this.growCircle < 0)
             this.growAmount *= -1
 
-        ellipse(this.x, this.y, this.raio + this.growCircle + random(-4, 4))
+        ellipse(this.x, this.y, this.raio + this.growCircle + random(-imgWidth / 400, imgWidth / 400))
     }
 
     playSound() {
