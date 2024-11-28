@@ -20,6 +20,11 @@ function canvasCreation() {
 }
 
 function windowResized() {
+    for (i = 0; i < zonaMapa.length; i++) {
+        zonaMapa[i].ativa = false
+        zonaMapa[i].stopSoundsAtNight();
+    }
+
     setup();
 }
 
